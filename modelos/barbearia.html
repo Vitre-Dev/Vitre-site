@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navalha Negra Barbearia | Projeto conceito Vitre</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0e0e0e;--card:#171717;--gold:#d4a24c;--ink:#f3efe6;--muted:#a59f94}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.demo{background:var(--gold);color:#111;text-align:center;font-size:.8rem;font-weight:700;padding:6px}
+header{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.logo{font-family:'Bebas Neue';font-size:1.9rem;letter-spacing:2px}.logo span{color:var(--gold)}
+nav{display:flex;gap:26px;color:var(--muted)}nav a:hover{color:var(--gold)}
+.btn{display:inline-block;background:var(--gold);color:#111;font-weight:700;padding:14px 26px;border-radius:4px}
+.hero{min-height:78vh;display:flex;align-items:center;background:linear-gradient(90deg,rgba(14,14,14,.95) 35%,rgba(14,14,14,.35)),url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1600&q=70') center/cover}
+.hero h1{font-family:'Bebas Neue';font-size:clamp(3.2rem,9vw,6.5rem);line-height:.95;letter-spacing:1px}
+.hero h1 span{color:var(--gold)}.hero p{color:var(--muted);max-width:440px;margin:18px 0 30px;font-size:1.1rem}
+section{padding:80px 0}h2{font-family:'Bebas Neue';font-size:3rem;letter-spacing:1px;margin-bottom:30px}h2 span{color:var(--gold)}
+.list{display:grid;grid-template-columns:1fr 1fr;gap:4px 50px}
+.item{display:flex;justify-content:space-between;padding:18px 0;border-bottom:1px dashed #333}.item b{color:var(--gold)}.item small{display:block;color:var(--muted)}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.gal img{width:100%;height:240px;object-fit:cover;border-radius:4px;filter:grayscale(.3)}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.box{background:var(--card);padding:28px;border-left:3px solid var(--gold)}.box h3{margin-bottom:6px}.box p{color:var(--muted)}
+footer{text-align:center;color:var(--muted);padding:30px;font-size:.85rem;border-top:1px solid #222}
+@media(max-width:800px){nav{display:none}.list,.gal,.info{grid-template-columns:1fr}}
+</style></head><body>
+<div class="demo">Projeto conceito criado pela Vitre · negócio fictício</div>
+<div class="wrap"><header><div class="logo">NAVALHA <span>NEGRA</span></div><nav><a href="#servicos">Serviços</a><a href="#galeria">Galeria</a><a href="#contato">Contato</a></nav><a class="btn" href="#contato">Agendar</a></header></div>
+<section class="hero"><div class="wrap"><h1>Estilo afiado.<br><span>Tradição</span> no corte.</h1><p>Cortes clássicos e modernos, barba na toalha quente e aquele café enquanto você espera.</p><a class="btn" href="#contato">Agendar horário</a></div></section>
+<section id="servicos"><div class="wrap"><h2>Nossos <span>serviços</span></h2><div class="list">
+<div class="item"><div>Corte masculino<small>Tesoura ou máquina</small></div><b>R$ 45</b></div>
+<div class="item"><div>Barba completa<small>Toalha quente e navalha</small></div><b>R$ 35</b></div>
+<div class="item"><div>Corte + barba<small>O combo da casa</small></div><b>R$ 70</b></div>
+<div class="item"><div>Pigmentação<small>Barba ou cabelo</small></div><b>R$ 40</b></div>
+<div class="item"><div>Sobrancelha<small>Na navalha</small></div><b>R$ 15</b></div>
+<div class="item"><div>Corte infantil<small>Até 10 anos</small></div><b>R$ 35</b></div></div></div></section>
+<section id="galeria" style="padding-top:0"><div class="wrap"><h2>Na <span>cadeira</span></h2><div class="gal">
+<img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=70" alt="Corte"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=70" alt="Barba"><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&q=70" alt="Barbearia"></div></div></section>
+<section id="contato" style="padding-top:0"><div class="wrap"><h2>Venha nos <span>visitar</span></h2><div class="info">
+<div class="box"><h3>Endereço</h3><p>Rua Exemplo, 123 · Centro</p></div><div class="box"><h3>Horário</h3><p>Ter a Sáb · 9h às 20h</p></div><div class="box"><h3>Agendamento</h3><p>Pelo WhatsApp, em segundos</p></div></div></div></section>
+<footer>© Navalha Negra (fictício) · Site de demonstração por Vitre Sites</footer>
+</body></html>

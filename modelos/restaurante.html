@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brasa & Sal | Projeto conceito Vitre</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff8ef;--red:#c2410c;--ink:#2a1a10;--muted:#6f5a4c;--card:#fff}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.demo{background:var(--red);color:#fff;text-align:center;font-size:.8rem;font-weight:700;padding:6px}
+.hero{min-height:82vh;color:#fff;background:linear-gradient(rgba(20,10,5,.55),rgba(20,10,5,.75)),url('https://images.unsplash.com/photo-1544025162-d76694265947?w=1600&q=70') center/cover;display:flex;flex-direction:column}
+header{display:flex;justify-content:space-between;align-items:center;padding:24px 0}
+.logo{font-family:Fraunces;font-weight:800;font-size:1.7rem}nav{display:flex;gap:26px;opacity:.9}
+.btn{display:inline-block;background:var(--red);color:#fff;font-weight:700;padding:14px 28px;border-radius:999px}
+.btn.alt{background:#fff;color:var(--ink)}
+.hero-c{flex:1;display:flex;flex-direction:column;justify-content:center;text-align:center;align-items:center}
+h1{font-family:Fraunces;font-weight:800;font-size:clamp(2.8rem,8vw,5.5rem);line-height:1}
+.hero-c p{font-size:1.15rem;opacity:.9;margin:18px 0 30px;max-width:520px}.acts{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+section{padding:80px 0}h2{font-family:Fraunces;font-size:2.6rem;text-align:center;margin-bottom:40px}
+.menu{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.dish{background:var(--card);border-radius:22px;overflow:hidden;box-shadow:0 14px 30px -18px rgba(0,0,0,.3)}.dish img{width:100%;height:210px;object-fit:cover}
+.dish div{padding:22px}.dish h3{font-family:Fraunces;font-size:1.3rem;display:flex;justify-content:space-between}.dish h3 span{color:var(--red)}.dish p{color:var(--muted);font-size:.95rem}
+.strip{background:var(--ink);color:#fff;text-align:center}.strip h2{color:#fff;margin-bottom:12px}.strip p{opacity:.8;margin-bottom:28px}
+footer{text-align:center;color:var(--muted);padding:30px;font-size:.85rem}
+@media(max-width:800px){nav{display:none}.menu{grid-template-columns:1fr}}
+</style></head><body>
+<div class="demo">Projeto conceito criado pela Vitre · negócio fictício</div>
+<div class="hero"><div class="wrap" style="width:100%"><header><div class="logo">Brasa & Sal</div><nav><a href="#cardapio">Cardápio</a><a href="#reservas">Reservas</a></nav></header></div>
+<div class="hero-c wrap"><h1>Fogo de chão,<br>sabor de casa.</h1><p>Carnes na brasa, acompanhamentos caseiros e a mesa cheia de gente querida.</p><div class="acts"><a class="btn" href="#reservas">Reservar mesa</a><a class="btn alt" href="#cardapio">Ver cardápio</a></div></div></div>
+<section id="cardapio"><div class="wrap"><h2>Os favoritos da casa</h2><div class="menu">
+<div class="dish"><img src="https://images.unsplash.com/photo-1558030006-450675393462?w=600&q=70" alt=""><div><h3>Picanha na brasa <span>R$ 89</span></h3><p>400g, farofa da casa, vinagrete e mandioca.</p></div></div>
+<div class="dish"><img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=600&q=70" alt=""><div><h3>Costela 12h <span>R$ 79</span></h3><p>Assada lentamente, desmancha no garfo.</p></div></div>
+<div class="dish"><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&q=70" alt=""><div><h3>Espetinhos mistos <span>R$ 49</span></h3><p>Carne, frango e linguiça com pão de alho.</p></div></div></div></div></section>
+<section id="reservas" class="strip"><div class="wrap"><h2>Reserve sua mesa</h2><p>Qua a Dom · 11h30 às 23h · Rua Exemplo, 456</p><a class="btn" href="#">Reservar pelo WhatsApp</a></div></section>
+<footer>© Brasa & Sal (fictício) · Site de demonstração por Vitre Sites</footer>
+</body></html>
