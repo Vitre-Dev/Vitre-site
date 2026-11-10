@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vitre Sites | A vitrine digital do seu negócio</title>
+<title>Vitre Sites | Seu negócio em destaque</title>
 <meta name="description" content="Criamos sites profissionais, rápidos e prontos para celular, com botão de WhatsApp. Seu negócio em destaque na internet.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -154,6 +154,21 @@
   footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.9rem}
   .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 
+
+  /* Pare e pense */
+  .think{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .q{position:relative;padding:34px 28px 28px}
+  .q::before{content:"?";position:absolute;top:14px;right:22px;font-family:'Orbitron',sans-serif;font-size:3.4rem;font-weight:800;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:.35}
+  .q h3{font-size:1.25rem;line-height:1.35;margin-bottom:12px;padding-right:34px}
+  .think-end{text-align:center;margin-top:46px;font-size:clamp(1.2rem,2.6vw,1.6rem);font-weight:600;line-height:1.4}
+  .think-end .grad{display:inline-block;margin-top:4px}
+  /* Frase de impacto */
+  .statement{text-align:center;padding:100px 0}
+  .statement p{font-size:clamp(1.6rem,4vw,2.8rem);font-weight:700;letter-spacing:-1px;line-height:1.2;max-width:900px;margin:0 auto}
+  .statement small{display:block;margin-top:18px;color:var(--muted);font-size:1rem;font-weight:400;letter-spacing:0}
+  .slogan{color:var(--muted);font-size:.85rem;margin-top:4px}
+  @media (max-width:900px){.think{grid-template-columns:1fr}.statement{padding:70px 0}}
+
   /* WhatsApp flutuante */
   .wa-float{position:fixed;right:22px;bottom:22px;width:60px;height:60px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 0 0 0 rgba(37,211,102,.6);z-index:60;animation:ring 2.4s infinite}
   @keyframes ring{70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
@@ -204,7 +219,7 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <span class="tag"><span class="dot"></span>Sites profissionais em poucos dias</span>
+        <span class="tag"><span class="dot"></span>Vitre · Seu negócio em destaque</span>
         <h1>A <span class="grad">vitrine digital</span> do seu negócio.</h1>
         <p>Criamos sites modernos, rápidos e prontos para celular, que transformam visitantes em clientes direto no seu WhatsApp.</p>
         <div class="hero-actions">
@@ -229,6 +244,22 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section id="pense">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">PARE E PENSE</span>
+        <h2>Três perguntas sobre o seu negócio</h2>
+        <p>Responda com sinceridade. Só você vai saber a resposta.</p>
+      </div>
+      <div class="think">
+        <div class="card q reveal"><h3>Quando alguém procura o seu serviço no Google, quem aparece: você ou o seu concorrente?</h3><p>Quem não aparece na busca simplesmente não entra na lista de opções do cliente.</p></div>
+        <div class="card q reveal"><h3>Se um cliente quiser te conhecer às 23h de um domingo, onde ele vai encontrar você?</h3><p>Seu horário termina. A curiosidade do cliente, não. Um site responde por você a qualquer hora.</p></div>
+        <div class="card q reveal"><h3>Quantos clientes já desistiram de você sem que você nem soubesse?</h3><p>Muita gente pesquisa antes de chamar. Se não acha nada, vai para o próximo, e você nunca fica sabendo.</p></div>
+      </div>
+      <p class="think-end reveal">Quem não é visto não é lembrado.<br><span class="grad">E quem não é lembrado não é escolhido.</span></p>
     </div>
   </section>
 
@@ -291,12 +322,19 @@
     </div>
   </section>
 
+  <section class="statement">
+    <div class="wrap reveal">
+      <p>Um site é o único funcionário que trabalha <span class="grad">24 horas por dia, 7 dias por semana</span>, sem pedir folga.</p>
+      <small>Enquanto você dorme, ele apresenta o seu negócio, tira dúvidas e leva o cliente até o seu WhatsApp.</small>
+    </div>
+  </section>
+
   <section id="planos">
     <div class="wrap">
       <div class="sec-head reveal">
         <span class="kicker">PLANOS</span>
         <h2>Simples, transparentes, sem surpresa</h2>
-        <p>Escolha o ideal para o momento do seu negócio. Domínio e hospedagem a gente ajuda a configurar.</p>
+        <p>Quanto vale um cliente novo para você? Se o site trouxer só um, ele provavelmente já se pagou.</p>
       </div>
       <div class="grid-3">
         <div class="card plan reveal">
@@ -400,8 +438,8 @@
     <div class="wrap">
       <div class="cta-box reveal">
         <span class="kicker">VAMOS COMEÇAR?</span>
-        <h2>Pronto para colocar seu negócio <span class="grad">na vitrine</span>?</h2>
-        <p>Chama a gente no WhatsApp e receba uma proposta sem compromisso.</p>
+        <h2>Enquanto você pensa, seu concorrente <span class="grad">já está na vitrine</span>.</h2>
+        <p>Dê o primeiro passo hoje. Chama a gente no WhatsApp e receba uma proposta sem compromisso.</p>
         <a class="btn btn-glow wa-link" href="#">Falar no WhatsApp</a>
       </div>
     </div>
@@ -410,7 +448,7 @@
 
 <footer>
   <div class="wrap foot">
-    <a href="#" class="logo" style="font-size:1rem"><span class="logo-mark" style="width:22px;height:22px"></span><b>VITRE</b></a>
+    <div><a href="#" class="logo" style="font-size:1rem"><span class="logo-mark" style="width:22px;height:22px"></span><b>VITRE</b></a><p class="slogan">Seu negócio em destaque.</p></div>
     <span>© <span id="ano"></span> Vitre Sites · vitresites.com.br</span>
   </div>
 </footer>
