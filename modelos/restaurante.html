@@ -4,35 +4,106 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Brasa & Sal | Projeto conceito Vitre</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="demo.css">
 <style>
-:root{--bg:#fff8ef;--red:#c2410c;--ink:#2a1a10;--muted:#6f5a4c;--card:#fff}
-*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
-a{color:inherit;text-decoration:none}.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-.demo{background:var(--red);color:#fff;text-align:center;font-size:.8rem;font-weight:700;padding:6px}
-.hero{min-height:82vh;color:#fff;background:linear-gradient(rgba(20,10,5,.55),rgba(20,10,5,.75)),url('https://images.unsplash.com/photo-1544025162-d76694265947?w=1600&q=70') center/cover;display:flex;flex-direction:column}
-header{display:flex;justify-content:space-between;align-items:center;padding:24px 0}
-.logo{font-family:Fraunces;font-weight:800;font-size:1.7rem}nav{display:flex;gap:26px;opacity:.9}
-.btn{display:inline-block;background:var(--red);color:#fff;font-weight:700;padding:14px 28px;border-radius:999px}
-.btn.alt{background:#fff;color:var(--ink)}
-.hero-c{flex:1;display:flex;flex-direction:column;justify-content:center;text-align:center;align-items:center}
-h1{font-family:Fraunces;font-weight:800;font-size:clamp(2.8rem,8vw,5.5rem);line-height:1}
-.hero-c p{font-size:1.15rem;opacity:.9;margin:18px 0 30px;max-width:520px}.acts{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-section{padding:80px 0}h2{font-family:Fraunces;font-size:2.6rem;text-align:center;margin-bottom:40px}
-.menu{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.dish{background:var(--card);border-radius:22px;overflow:hidden;box-shadow:0 14px 30px -18px rgba(0,0,0,.3)}.dish img{width:100%;height:210px;object-fit:cover}
-.dish div{padding:22px}.dish h3{font-family:Fraunces;font-size:1.3rem;display:flex;justify-content:space-between}.dish h3 span{color:var(--red)}.dish p{color:var(--muted);font-size:.95rem}
-.strip{background:var(--ink);color:#fff;text-align:center}.strip h2{color:#fff;margin-bottom:12px}.strip p{opacity:.8;margin-bottom:28px}
-footer{text-align:center;color:var(--muted);padding:30px;font-size:.85rem}
-@media(max-width:800px){nav{display:none}.menu{grid-template-columns:1fr}}
-</style></head><body>
-<div class="demo">Projeto conceito criado pela Vitre · negócio fictício</div>
-<div class="hero"><div class="wrap" style="width:100%"><header><div class="logo">Brasa & Sal</div><nav><a href="#cardapio">Cardápio</a><a href="#reservas">Reservas</a></nav></header></div>
-<div class="hero-c wrap"><h1>Fogo de chão,<br>sabor de casa.</h1><p>Carnes na brasa, acompanhamentos caseiros e a mesa cheia de gente querida.</p><div class="acts"><a class="btn" href="#reservas">Reservar mesa</a><a class="btn alt" href="#cardapio">Ver cardápio</a></div></div></div>
-<section id="cardapio"><div class="wrap"><h2>Os favoritos da casa</h2><div class="menu">
-<div class="dish"><img src="https://images.unsplash.com/photo-1558030006-450675393462?w=600&q=70" alt=""><div><h3>Picanha na brasa <span>R$ 89</span></h3><p>400g, farofa da casa, vinagrete e mandioca.</p></div></div>
-<div class="dish"><img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=600&q=70" alt=""><div><h3>Costela 12h <span>R$ 79</span></h3><p>Assada lentamente, desmancha no garfo.</p></div></div>
-<div class="dish"><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&q=70" alt=""><div><h3>Espetinhos mistos <span>R$ 49</span></h3><p>Carne, frango e linguiça com pão de alho.</p></div></div></div></div></section>
-<section id="reservas" class="strip"><div class="wrap"><h2>Reserve sua mesa</h2><p>Qua a Dom · 11h30 às 23h · Rua Exemplo, 456</p><a class="btn" href="#">Reservar pelo WhatsApp</a></div></section>
-<footer>© Brasa & Sal (fictício) · Site de demonstração por Vitre Sites</footer>
-</body></html>
+:root{--bg:#fff8ef;--header:rgba(255,248,239,.94);--card:#fff;--accent:#c2410c;--ink:#2a1a10;--muted:#6f5a4c;--line:#f0dfcc;--r:20px}
+body{font-family:'DM Sans',sans-serif}
+h1,h2,h3,.logo{font-family:Fraunces,serif;font-weight:800}
+.logo{font-size:1.6rem}.logo span{color:var(--accent)}
+.btn{border-radius:999px;font-weight:700}
+.hero{min-height:84vh;color:#fff;background:linear-gradient(rgba(20,10,5,.5),rgba(20,10,5,.78)),url('https://images.unsplash.com/photo-1544025162-d76694265947?w=1600&q=70') center/cover,#3a2418;display:flex;align-items:center;text-align:center}
+.hero .wrap{display:flex;flex-direction:column;align-items:center}
+h1{font-size:clamp(3rem,8.5vw,6rem);line-height:1}
+.hero p{font-size:1.15rem;opacity:.9;margin:20px 0 32px;max-width:540px}
+.hero .acts{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.btn.white{background:#fff;color:var(--ink)}
+.tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:34px}
+.tab{border:1.5px solid var(--line);background:#fff;padding:10px 20px;border-radius:999px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--ink)}
+.tab.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.cat{display:none}.cat.on{display:grid}
+.dish{padding:0;overflow:hidden;box-shadow:0 14px 30px -20px rgba(0,0,0,.35)}
+.dish img{height:210px;border-radius:0}.dish div{padding:22px}
+.dish h3{font-size:1.25rem;display:flex;justify-content:space-between;gap:12px}.dish h3 span{color:var(--accent);white-space:nowrap}
+.dish p{color:var(--muted);font-size:.95rem}
+.simple{display:grid;grid-template-columns:1fr 1fr;gap:0 50px}
+.simple div{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px dashed var(--line)}
+.simple b{color:var(--accent)}
+.dark{background:var(--ink);color:#fff}.dark .muted{color:#d6c3b3}
+.events{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.events .card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12)}
+.events h3{font-size:1.4rem;margin-bottom:6px}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:240px;gap:12px}
+.gal img{height:100%}
+@media(max-width:900px){.simple,.events{grid-template-columns:1fr}.gal{grid-template-columns:1fr 1fr;grid-auto-rows:170px}}
+</style>
+</head>
+<body data-nicho="restaurante">
+<div class="demo">Projeto conceito criado pela <a href="../index.html">Vitre</a> · negócio fictício</div>
+<header class="top"><div class="wrap">
+  <a href="#" class="logo">Brasa <span>&</span> Sal</a>
+  <nav><a href="#cardapio">Cardápio</a><a href="#sobre">Nossa história</a><a href="#eventos">Eventos</a><a href="#contato">Reservas</a></nav>
+  <a class="btn fill wa hide-m" href="#">Reservar mesa</a>
+  <button class="burger" aria-label="Abrir menu"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <h1>Fogo de chão,<br>sabor de casa.</h1>
+  <p>Carnes na brasa, acompanhamentos caseiros e a mesa cheia de gente querida. De quarta a domingo.</p>
+  <div class="acts"><a class="btn fill wa" href="#">Reservar mesa</a><a class="btn white" href="#cardapio">Ver cardápio</a></div>
+</div></section>
+
+<section id="cardapio"><div class="wrap">
+  <div class="head center rv"><span class="eyebrow">Cardápio</span><h2>Os favoritos da casa</h2></div>
+  <div class="tabs" role="tablist">
+    <button class="tab on" data-cat="carnes">Carnes</button><button class="tab" data-cat="acomp">Acompanhamentos</button><button class="tab" data-cat="sobremesas">Sobremesas</button><button class="tab" data-cat="bebidas">Bebidas</button>
+  </div>
+  <div class="cat g3 on" id="carnes">
+    <div class="card dish"><img class="ph" src="https://images.unsplash.com/photo-1558030006-450675393462?w=600&q=70" alt=""><div><h3>Picanha na brasa <span>R$ 89</span></h3><p>400g, farofa da casa, vinagrete e mandioca. Serve 2.</p></div></div>
+    <div class="card dish"><img class="ph" src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=600&q=70" alt=""><div><h3>Costela 12h <span>R$ 79</span></h3><p>Assada lentamente, desmancha no garfo.</p></div></div>
+    <div class="card dish"><img class="ph" src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&q=70" alt=""><div><h3>Espetinhos mistos <span>R$ 49</span></h3><p>Carne, frango e linguiça com pão de alho.</p></div></div>
+  </div>
+  <div class="cat simple" id="acomp"><div><span>Arroz biro-biro</span><b>R$ 22</b></div><div><span>Farofa de bacon</span><b>R$ 18</b></div><div><span>Mandioca frita</span><b>R$ 24</b></div><div><span>Vinagrete</span><b>R$ 12</b></div><div><span>Feijão tropeiro</span><b>R$ 26</b></div><div><span>Salada da casa</span><b>R$ 28</b></div></div>
+  <div class="cat simple" id="sobremesas"><div><span>Pudim de leite</span><b>R$ 16</b></div><div><span>Abacaxi na brasa com sorvete</span><b>R$ 22</b></div><div><span>Petit gâteau</span><b>R$ 26</b></div><div><span>Doce de leite com queijo</span><b>R$ 18</b></div></div>
+  <div class="cat simple" id="bebidas"><div><span>Refrigerante lata</span><b>R$ 7</b></div><div><span>Suco natural</span><b>R$ 12</b></div><div><span>Chope 300ml</span><b>R$ 14</b></div><div><span>Caipirinha</span><b>R$ 22</b></div></div>
+</div></section>
+
+<section id="sobre" style="background:#fff"><div class="wrap g2">
+  <img class="ph rv" style="height:460px" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=70" alt="Salão do restaurante">
+  <div class="rv"><span class="eyebrow">Nossa história</span><div class="head" style="margin-bottom:18px"><h2>Uma receita de família</h2></div><p class="muted">Tudo começou com os churrascos de domingo da família. A brasa, o tempero simples e a mesa farta viraram restaurante, mas o espírito continua o mesmo: comida honesta, feita com carinho, para reunir quem a gente gosta.</p><div class="stats"><div><b>120</b><span>lugares</span></div><div><b>2</b><span>ambientes</span></div><div><b>100%</b><span>carvão vegetal</span></div></div></div>
+</div></section>
+
+<section id="eventos" class="dark"><div class="wrap">
+  <div class="head rv"><span class="eyebrow">Eventos</span><h2>Comemore com a gente</h2><p class="muted">Aniversários, confraternizações e encontros de família com cardápio especial.</p></div>
+  <div class="events">
+    <div class="card rv"><h3>Espaço reservado</h3><p class="muted">Salão privativo para até 40 pessoas, com decoração simples inclusa.</p></div>
+    <div class="card rv"><h3>Rodízio para grupos</h3><p class="muted">Preço especial por pessoa para grupos a partir de 15 pessoas.</p></div>
+  </div>
+  <div style="margin-top:28px" class="rv"><a class="btn fill wa" href="#">Pedir orçamento de evento</a></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="gal rv">
+    <img class="ph" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700&q=70" alt="">
+    <img class="ph" src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=700&q=70" alt="">
+    <img class="ph" src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=700&q=70" alt="">
+  </div>
+</div></section>
+
+<section id="contato" style="padding-top:0"><div class="wrap contact">
+  <div class="rv"><span class="eyebrow">Reservas</span><div class="head" style="margin-bottom:0"><h2>Reserve sua mesa</h2></div>
+    <ul><li><b>Endereço</b>Rua Exemplo, 456 · Centro</li><li><b>Horário</b>Quarta a domingo, 11h30 às 23h</li><li><b>Delivery</b>Pelo WhatsApp, das 18h às 22h</li></ul>
+    <a class="btn fill wa" href="#">Reservar pelo WhatsApp</a></div>
+  <iframe class="map rv" src="https://maps.google.com/maps?q=Bras%C3%ADlia%2C%20DF&z=13&output=embed" loading="lazy" title="Mapa"></iframe>
+</div></section>
+
+<footer class="foot"><div class="wrap"><span>© <span id="ano"></span> Brasa & Sal (negócio fictício)</span><span>Site criado por <a href="../index.html">Vitre Sites</a></span></div></footer>
+<script src="demo.js"></script>
+<script>
+document.querySelectorAll(".tab").forEach(function(t){t.addEventListener("click",function(){
+  document.querySelectorAll(".tab").forEach(function(x){x.classList.remove("on")});
+  document.querySelectorAll(".cat").forEach(function(x){x.classList.remove("on")});
+  t.classList.add("on");document.getElementById(t.dataset.cat).classList.add("on");
+})});
+</script>
+</body>
+</html>

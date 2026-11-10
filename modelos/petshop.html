@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patinha Feliz Pet Shop | Projeto conceito Vitre</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="demo.css">
+<style>
+:root{--bg:#fffaf3;--header:rgba(255,250,243,.95);--card:#fff;--accent:#f97316;--ink:#29303d;--muted:#6b7280;--line:#f3e5d3;--teal:#14b8a6;--r:24px}
+body{font-family:Nunito,sans-serif}
+h1,h2,h3,.logo{font-family:'Baloo 2',cursive;font-weight:800}
+.logo{font-size:1.6rem;display:flex;align-items:center;gap:8px}.logo span{color:var(--accent)}
+.logo svg{width:30px;height:30px;fill:var(--accent)}
+.btn{border-radius:999px;font-weight:700}
+.btn.teal{background:var(--teal);color:#fff}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding-top:60px;padding-bottom:70px}
+h1{font-size:clamp(2.7rem,6vw,4.4rem);line-height:1.02}
+h1 span{color:var(--accent)}
+.hero p{color:var(--muted);font-size:1.15rem;margin:18px 0 30px;max-width:480px}
+.hero .acts{display:flex;gap:12px;flex-wrap:wrap}
+.blob{position:relative}
+.blob::before{content:"";position:absolute;inset:6% 0 0 8%;background:#ffe2c7;border-radius:60% 40% 55% 45%/50% 55% 45% 50%;z-index:-1}
+.blob img{height:480px;border-radius:50% 50% 46% 54%/55% 50% 50% 45%}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.chips span{background:#fff;border:2px solid var(--line);border-radius:999px;padding:6px 14px;font-weight:700;font-size:.9rem}
+.svc{text-align:center;transition:.25s;border-width:2px}
+.svc:hover{transform:translateY(-6px) rotate(-1deg);border-color:var(--accent)}
+.svc .em{font-size:2.6rem;line-height:1;margin-bottom:10px}
+.svc h3{font-size:1.4rem}.svc p{color:var(--muted)}.svc b{display:block;margin-top:10px;color:var(--accent)}
+.sizes{display:grid;grid-template-columns:repeat(3,1fr);gap:0;background:#fff;border:2px solid var(--line);border-radius:24px;overflow:hidden}
+.sizes div{padding:26px;text-align:center;border-right:2px solid var(--line)}.sizes div:last-child{border:0}
+.sizes h3{font-size:1.3rem}.sizes p{color:var(--muted);font-size:.9rem}.sizes b{display:block;font-family:'Baloo 2';font-size:2rem;color:var(--teal)}
+.taxi{background:var(--teal);color:#fff;border-radius:28px;padding:50px;display:grid;grid-template-columns:1.3fr .7fr;gap:30px;align-items:center}
+.taxi p{opacity:.92}.taxi .btn{background:#fff;color:var(--teal)}
+.taxi .em{font-size:6rem;text-align:center;line-height:1}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gal img{height:220px;border-radius:24px}
+@media(max-width:900px){.hero .wrap,.taxi{grid-template-columns:1fr}.blob img{height:360px}.sizes{grid-template-columns:1fr}.sizes div{border-right:0;border-bottom:2px solid var(--line)}.gal{grid-template-columns:1fr 1fr}.taxi{padding:32px}.taxi .em{display:none}}
+</style>
+</head>
+<body data-nicho="pet shop">
+<div class="demo">Projeto conceito criado pela <a href="../index.html">Vitre</a> · negócio fictício</div>
+<header class="top"><div class="wrap">
+  <a href="#" class="logo"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="16" rx="5" ry="4.2"/><circle cx="6" cy="10" r="2.2"/><circle cx="18" cy="10" r="2.2"/><circle cx="9.2" cy="5.8" r="2.1"/><circle cx="14.8" cy="5.8" r="2.1"/></svg>Patinha<span>Feliz</span></a>
+  <nav><a href="#servicos">Serviços</a><a href="#precos">Preços</a><a href="#taxi">Leva e traz</a><a href="#contato">Contato</a></nav>
+  <a class="btn fill wa hide-m" href="#">Agendar banho</a>
+  <button class="burger" aria-label="Abrir menu"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div class="rv"><span class="eyebrow">Banho, tosa e carinho</span><h1>Seu pet <span>cheiroso</span> e feliz da vida!</h1><p>Banho e tosa com produtos de qualidade, profissionais pacientes e muito amor por bichos de todos os tamanhos.</p>
+  <div class="acts"><a class="btn fill wa" href="#">Agendar pelo WhatsApp</a><a class="btn teal" href="#precos">Ver preços</a></div>
+  <div class="chips"><span>🐶 Cães</span><span>🐱 Gatos</span><span>🚗 Leva e traz</span></div></div>
+  <div class="blob rv"><img class="ph" src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=900&q=70" alt="Cachorros felizes"></div>
+</div></section>
+
+<section id="servicos" style="background:#fff"><div class="wrap">
+  <div class="head center rv"><span class="eyebrow">Serviços</span><h2>Tudo que seu pet precisa</h2></div>
+  <div class="g4">
+    <div class="card svc rv"><div class="em">🛁</div><h3>Banho</h3><p>Shampoo neutro, secagem e perfume suave.</p></div>
+    <div class="card svc rv"><div class="em">✂️</div><h3>Tosa</h3><p>Higiênica, na máquina ou na tesoura.</p></div>
+    <div class="card svc rv"><div class="em">💅</div><h3>Estética</h3><p>Corte de unhas, limpeza de ouvido e hidratação.</p></div>
+    <div class="card svc rv"><div class="em">🦴</div><h3>Petiscos e rações</h3><p>As melhores marcas para o seu amigo.</p></div>
+  </div>
+</div></section>
+
+<section id="precos"><div class="wrap">
+  <div class="head center rv"><span class="eyebrow">Preços</span><h2>Banho por porte</h2><p>Valores de referência. Tosa e pelagem longa podem alterar o preço.</p></div>
+  <div class="sizes rv">
+    <div><h3>Pequeno</h3><p>Até 10 kg</p><b>R$ 50</b></div>
+    <div><h3>Médio</h3><p>De 10 a 25 kg</p><b>R$ 70</b></div>
+    <div><h3>Grande</h3><p>Acima de 25 kg</p><b>R$ 95</b></div>
+  </div>
+  <p class="muted rv" style="text-align:center;margin-top:18px">Pacote mensal com 4 banhos: <b style="color:var(--accent)">ganhe 1 banho grátis</b></p>
+</div></section>
+
+<section id="taxi" style="padding-top:0"><div class="wrap">
+  <div class="taxi rv"><div><h2 style="font-size:clamp(1.9rem,4vw,2.8rem);line-height:1.1;margin-bottom:10px">Táxi Dog: a gente busca e leva!</h2><p>Sem tempo? Buscamos seu pet em casa e devolvemos limpinho, com todo o cuidado e segurança.</p><div style="margin-top:22px"><a class="btn wa" href="#">Agendar leva e traz</a></div></div><div class="em">🚐</div></div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="head center rv"><span class="eyebrow">Galeria</span><h2>Nossos clientes de quatro patas</h2></div>
+  <div class="gal rv">
+    <img class="ph" src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=500&q=70" alt="">
+    <img class="ph" src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=500&q=70" alt="">
+    <img class="ph" src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=500&q=70" alt="">
+    <img class="ph" src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?w=500&q=70" alt="">
+  </div>
+</div></section>
+
+<section style="background:#fff"><div class="wrap">
+  <div class="head center rv"><span class="eyebrow">Dúvidas</span><h2>Perguntas frequentes</h2></div>
+  <div class="faq rv">
+    <details><summary>Quanto tempo demora o banho?</summary><p>Em média de 1h30 a 2h, dependendo do porte e da pelagem. Avisamos pelo WhatsApp quando estiver pronto.</p></details>
+    <details><summary>Atendem gatos?</summary><p>Sim! Gatos são atendidos em horário separado, para ficarem mais tranquilos.</p></details>
+    <details><summary>Precisa de vacina em dia?</summary><p>Sim, pedimos a carteira de vacinação atualizada para a segurança de todos os pets.</p></details>
+    <details><summary>Qual a área do leva e traz?</summary><p>Atendemos bairros próximos. Chame no WhatsApp que confirmamos o seu endereço.</p></details>
+  </div>
+</div></section>
+
+<section id="contato"><div class="wrap contact">
+  <div class="rv"><span class="eyebrow">Contato</span><div class="head" style="margin-bottom:0"><h2>Vem fazer uma visita!</h2></div>
+    <ul><li><b>Endereço</b>Rua Exemplo, 77 · Bairro Jardim</li><li><b>Horário</b>Segunda a sábado, 8h às 18h</li></ul>
+    <a class="btn fill wa" href="#">Agendar pelo WhatsApp</a></div>
+  <iframe class="map rv" src="https://maps.google.com/maps?q=Bras%C3%ADlia%2C%20DF&z=13&output=embed" loading="lazy" title="Mapa"></iframe>
+</div></section>
+
+<footer class="foot"><div class="wrap"><span>© <span id="ano"></span> Patinha Feliz (negócio fictício)</span><span>Site criado por <a href="../index.html">Vitre Sites</a></span></div></footer>
+<script src="demo.js"></script>
+</body>
+</html>

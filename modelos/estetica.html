@@ -4,36 +4,108 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Clínica Lumière | Projeto conceito Vitre</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="demo.css">
 <style>
-:root{--bg:#fbf7f3;--rose:#c98f7f;--deep:#3e2a26;--muted:#7d6a64;--soft:#f2e6df}
-*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
-body{font-family:Jost,sans-serif;font-weight:300;background:var(--bg);color:var(--deep);line-height:1.7}
-a{color:inherit;text-decoration:none}.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-.demo{background:var(--deep);color:#fff;text-align:center;font-size:.8rem;padding:6px}
-header{display:flex;justify-content:space-between;align-items:center;padding:24px 0}
-.logo{font-family:'Cormorant Garamond';font-size:1.9rem;font-weight:600;letter-spacing:3px}
-nav{display:flex;gap:30px;font-size:.95rem;color:var(--muted)}
-.btn{display:inline-block;border:1px solid var(--deep);padding:13px 28px;border-radius:999px;font-weight:400;transition:.2s}.btn:hover{background:var(--deep);color:#fff}
-.btn.fill{background:var(--rose);border-color:var(--rose);color:#fff}
-.hero{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;padding:50px 0 80px}
-h1{font-family:'Cormorant Garamond';font-size:clamp(2.8rem,6vw,4.6rem);font-weight:500;line-height:1.05}h1 i{color:var(--rose)}
-.hero p{color:var(--muted);font-size:1.1rem;margin:20px 0 32px;max-width:440px}
-.hero img{width:100%;height:520px;object-fit:cover;border-radius:220px 220px 20px 20px}
-section{padding:80px 0}h2{font-family:'Cormorant Garamond';font-size:2.8rem;font-weight:500;text-align:center;margin-bottom:46px}h2 i{color:var(--rose)}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.card{background:#fff;border-radius:20px;overflow:hidden}.card img{width:100%;height:220px;object-fit:cover}.card div{padding:24px}.card h3{font-family:'Cormorant Garamond';font-size:1.6rem;font-weight:600}.card p{color:var(--muted)}
-.band{background:var(--soft);text-align:center}.band p{max-width:620px;margin:0 auto 30px;color:var(--muted);font-size:1.1rem}
-footer{text-align:center;color:var(--muted);padding:30px;font-size:.85rem}
-@media(max-width:800px){nav{display:none}.hero,.cards{grid-template-columns:1fr}.hero img{height:380px}}
-</style></head><body>
-<div class="demo">Projeto conceito criado pela Vitre · negócio fictício</div>
-<div class="wrap"><header><div class="logo">LUMIÈRE</div><nav><a href="#tratamentos">Tratamentos</a><a href="#sobre">Sobre</a><a href="#agendar">Contato</a></nav><a class="btn" href="#agendar">Agendar avaliação</a></header>
-<div class="hero"><div><h1>Realce a sua <i>beleza natural</i></h1><p>Tratamentos faciais e corporais com tecnologia moderna e um atendimento que cuida de você do início ao fim.</p><a class="btn fill" href="#agendar">Agendar avaliação gratuita</a></div>
-<img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=900&q=70" alt="Tratamento facial"></div></div>
-<section id="tratamentos" style="background:#fff"><div class="wrap"><h2>Nossos <i>tratamentos</i></h2><div class="cards">
-<div class="card"><img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=70" alt=""><div><h3>Limpeza de pele</h3><p>Pele renovada, limpa e luminosa em uma sessão.</p></div></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&q=70" alt=""><div><h3>Massagem modeladora</h3><p>Contorno corporal e bem-estar com técnicas manuais.</p></div></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&q=70" alt=""><div><h3>Peeling</h3><p>Uniformiza o tom e suaviza manchas e marcas.</p></div></div></div></div></section>
-<section id="agendar" class="band"><div class="wrap"><h2 style="margin-bottom:16px">Sua primeira <i>avaliação</i> é por nossa conta</h2><p>Converse com nossa equipe, entenda o que sua pele precisa e monte um plano de cuidado só seu.</p><a class="btn fill" href="#">Falar no WhatsApp</a></div></section>
-<footer>© Clínica Lumière (fictício) · Site de demonstração por Vitre Sites</footer>
-</body></html>
+:root{--bg:#fbf7f3;--header:rgba(251,247,243,.94);--card:#fff;--accent:#c98f7f;--ink:#3e2a26;--muted:#7d6a64;--line:#eadcd4;--r:20px}
+body{font-family:Jost,sans-serif;font-weight:300}
+h1,h2,h3,.logo{font-family:'Cormorant Garamond',serif;font-weight:500}
+.logo{font-size:1.9rem;letter-spacing:4px;font-weight:600}
+h1 i,h2 i{color:var(--accent)}
+.btn{border-radius:999px;font-weight:400}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:60px 0 90px}
+h1{font-size:clamp(3rem,6.4vw,5rem);line-height:1.02}
+.hero p{color:var(--muted);font-size:1.12rem;margin:22px 0 34px;max-width:440px}
+.hero .acts{display:flex;gap:12px;flex-wrap:wrap}
+.hero img{height:560px;border-radius:260px 260px 24px 24px}
+.head h2{font-size:clamp(2.3rem,4.6vw,3.2rem)}
+.trat{padding:0;overflow:hidden}.trat img{height:220px;border-radius:0}
+.trat div{padding:24px}.trat h3{font-size:1.6rem;font-weight:600}.trat p{color:var(--muted)}
+.trat small{display:block;margin-top:12px;color:var(--accent);font-weight:500}
+.diffs .card{text-align:center;background:transparent;border:0;padding:10px}
+.ic{width:64px;height:64px;border-radius:50%;background:#f2e6df;display:grid;place-items:center;margin:0 auto 16px}
+.ic svg{width:28px;height:28px;stroke:var(--accent);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.diffs h3{font-size:1.5rem;font-weight:600}
+.band{background:#f2e6df}
+.steps{counter-reset:s}.steps .card{position:relative;padding-top:60px}
+.steps .card::before{counter-increment:s;content:"0" counter(s);position:absolute;top:20px;left:28px;font-family:'Cormorant Garamond';font-size:2rem;color:var(--accent)}
+.steps h3{font-size:1.5rem;font-weight:600}.steps p{color:var(--muted)}
+.cta{text-align:center}.cta p{max-width:600px;margin:0 auto 30px;color:var(--muted);font-size:1.1rem}
+@media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:30px}.hero img{height:400px}}
+</style>
+</head>
+<body data-nicho="clínica de estética">
+<div class="demo">Projeto conceito criado pela <a href="../index.html">Vitre</a> · negócio fictício</div>
+<header class="top"><div class="wrap">
+  <a href="#" class="logo">LUMIÈRE</a>
+  <nav><a href="#tratamentos">Tratamentos</a><a href="#sobre">Sobre</a><a href="#equipe">Equipe</a><a href="#duvidas">Dúvidas</a><a href="#contato">Contato</a></nav>
+  <a class="btn line wa hide-m" href="#">Agendar avaliação</a>
+  <button class="burger" aria-label="Abrir menu"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></header>
+
+<div class="wrap hero">
+  <div class="rv"><span class="eyebrow">Estética facial e corporal</span><h1>Realce a sua <i>beleza natural</i></h1><p>Tratamentos com tecnologia moderna e um atendimento que cuida de você do início ao fim, num espaço pensado para o seu bem-estar.</p><div class="acts"><a class="btn fill wa" href="#">Agendar avaliação gratuita</a><a class="btn line" href="#tratamentos">Ver tratamentos</a></div></div>
+  <img class="ph rv" src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=900&q=70" alt="Tratamento facial">
+</div>
+
+<section class="band"><div class="wrap g3 diffs">
+  <div class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/></svg></div><h3>Segurança</h3><p class="muted">Profissionais habilitadas e protocolos seguros.</p></div>
+  <div class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.5-7 11-7 11z"/></svg></div><h3>Acolhimento</h3><p class="muted">Ambiente calmo e atendimento sem pressa.</p></div>
+  <div class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M6 18l2-2M16 8l2-2"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Resultados</h3><p class="muted">Plano personalizado para cada tipo de pele.</p></div>
+</div></section>
+
+<section id="tratamentos" style="background:#fff"><div class="wrap">
+  <div class="head center rv"><span class="eyebrow">Tratamentos</span><h2>Cuidados para <i>cada necessidade</i></h2></div>
+  <div class="g3">
+    <div class="card trat rv"><img class="ph" src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=70" alt=""><div><h3>Limpeza de pele</h3><p>Remove impurezas e deixa a pele renovada e luminosa.</p><small>A partir de R$ 150</small></div></div>
+    <div class="card trat rv"><img class="ph" src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&q=70" alt=""><div><h3>Massagem modeladora</h3><p>Contorno corporal e bem-estar com técnicas manuais.</p><small>A partir de R$ 120</small></div></div>
+    <div class="card trat rv"><img class="ph" src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&q=70" alt=""><div><h3>Peeling</h3><p>Uniformiza o tom e suaviza manchas e marcas.</p><small>A partir de R$ 220</small></div></div>
+    <div class="card trat rv"><img class="ph" src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=70" alt=""><div><h3>Design de sobrancelhas</h3><p>Formato que valoriza o seu rosto.</p><small>A partir de R$ 60</small></div></div>
+    <div class="card trat rv"><img class="ph" src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=600&q=70" alt=""><div><h3>Drenagem linfática</h3><p>Reduz o inchaço e melhora a circulação.</p><small>A partir de R$ 130</small></div></div>
+    <div class="card trat rv"><img class="ph" src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=70" alt=""><div><h3>Hidratação facial</h3><p>Pele nutrida, macia e com viço.</p><small>A partir de R$ 140</small></div></div>
+  </div>
+</div></section>
+
+<section id="sobre"><div class="wrap g2">
+  <img class="ph rv" style="height:480px" src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=900&q=70" alt="Espaço da clínica">
+  <div class="rv"><span class="eyebrow">Sobre a Lumière</span><div class="head" style="margin-bottom:18px"><h2>Um espaço feito para <i>você se cuidar</i></h2></div><p class="muted">Acreditamos que estética é também autoestima. Por isso, cada tratamento começa com uma conversa: entendemos sua rotina, seus objetivos e o que sua pele realmente precisa. Nada de pacotes prontos, só o que faz sentido para você.</p><div class="stats"><div><b>8 anos</b><span>de experiência</span></div><div><b>15+</b><span>tratamentos</span></div></div></div>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <div class="head center rv"><span class="eyebrow">Como funciona</span><h2>Sua jornada <i>na Lumière</i></h2></div>
+  <div class="g3 steps">
+    <div class="card rv"><h3>Avaliação gratuita</h3><p>Analisamos sua pele e conversamos sobre seus objetivos.</p></div>
+    <div class="card rv"><h3>Plano personalizado</h3><p>Montamos o protocolo ideal, com prazos e valores claros.</p></div>
+    <div class="card rv"><h3>Acompanhamento</h3><p>Registramos a evolução e ajustamos o que for preciso.</p></div>
+  </div>
+</div></section>
+
+<section id="equipe"><div class="wrap">
+  <div class="head center rv"><span class="eyebrow">Equipe</span><h2>Profissionais que <i>cuidam de você</i></h2></div>
+  <div class="g3 team">
+    <div class="rv"><img class="ph" src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=600&q=70" alt=""><h3 style="font-size:1.5rem">Dra. Helena</h3><p>Biomédica esteta · Fundadora</p></div>
+    <div class="rv"><img class="ph" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=70" alt=""><h3 style="font-size:1.5rem">Carolina</h3><p>Esteticista · Tratamentos faciais</p></div>
+    <div class="rv"><img class="ph" src="https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?w=600&q=70" alt=""><h3 style="font-size:1.5rem">Juliana</h3><p>Massoterapeuta · Corporal</p></div>
+  </div>
+</div></section>
+
+<section id="duvidas" style="background:#fff"><div class="wrap">
+  <div class="head center rv"><span class="eyebrow">Dúvidas</span><h2>Perguntas <i>frequentes</i></h2></div>
+  <div class="faq rv">
+    <details><summary>A avaliação é mesmo gratuita?</summary><p>Sim. A primeira avaliação não tem custo e não obriga você a fechar nenhum tratamento.</p></details>
+    <details><summary>Quantas sessões vou precisar?</summary><p>Depende do tratamento e do seu objetivo. Na avaliação, passamos uma estimativa clara.</p></details>
+    <details><summary>Vocês parcelam?</summary><p>Sim, pacotes de sessões podem ser parcelados no cartão.</p></details>
+    <details><summary>Os tratamentos doem?</summary><p>A maioria é confortável. Quando há algum desconforto, explicamos antes e usamos técnicas para minimizá-lo.</p></details>
+  </div>
+</div></section>
+
+<section id="contato"><div class="wrap contact">
+  <div class="rv"><span class="eyebrow">Contato</span><div class="head" style="margin-bottom:0"><h2>Agende sua <i>avaliação</i></h2></div>
+    <ul><li><b>Endereço</b>Av. Exemplo, 789 · Sala 12</li><li><b>Horário</b>Segunda a sexta, 9h às 19h · Sábado, 9h às 14h</li><li><b>Atendimento</b>Somente com hora marcada</li></ul>
+    <a class="btn fill wa" href="#">Falar no WhatsApp</a></div>
+  <iframe class="map rv" src="https://maps.google.com/maps?q=Bras%C3%ADlia%2C%20DF&z=13&output=embed" loading="lazy" title="Mapa"></iframe>
+</div></section>
+
+<footer class="foot"><div class="wrap"><span>© <span id="ano"></span> Clínica Lumière (negócio fictício)</span><span>Site criado por <a href="../index.html">Vitre Sites</a></span></div></footer>
+<script src="demo.js"></script>
+</body>
+</html>

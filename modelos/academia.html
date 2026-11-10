@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pulse Fit Academia | Projeto conceito Vitre</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="demo.css">
+<style>
+:root{--bg:#0b0b0c;--header:rgba(11,11,12,.92);--card:#151517;--accent:#c6ff00;--on-accent:#0b0b0c;--ink:#f4f4f5;--muted:#a1a1aa;--line:#26262a;--r:6px;--map-filter:grayscale(1) invert(.92) contrast(.9)}
+body{font-family:Archivo,sans-serif}
+h1,h2,.logo{font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.5px}
+h3{font-weight:800}
+.logo{font-size:1.7rem}.logo span{color:var(--accent)}
+.hero{min-height:88vh;display:flex;align-items:flex-end;padding-bottom:80px;background:linear-gradient(0deg,#0b0b0c 5%,rgba(11,11,12,.3) 60%,rgba(11,11,12,.6)),url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=70') center/cover,#18181b}
+h1{font-size:clamp(3.4rem,11vw,8rem);line-height:.9}
+h1 span,h2 span{color:var(--accent)}
+.hero p{color:#d4d4d8;font-size:1.15rem;margin:18px 0 30px;max-width:520px}
+.hero .acts{display:flex;gap:12px;flex-wrap:wrap}
+.btn{text-transform:uppercase;letter-spacing:1px;font-weight:800;font-size:.9rem}
+.ticker{background:var(--accent);color:#0b0b0c;overflow:hidden;white-space:nowrap;padding:14px 0;font-family:Anton;font-size:1.4rem;text-transform:uppercase}
+.ticker div{display:inline-block;animation:tk 22s linear infinite}
+@keyframes tk{to{transform:translateX(-50%)}}
+.head h2{font-size:clamp(2.6rem,6vw,4rem);line-height:1}
+.mod{padding:0;overflow:hidden;position:relative}
+.mod img{height:300px;border-radius:0;filter:grayscale(.5)}
+.mod div{position:absolute;inset:auto 0 0 0;padding:22px;background:linear-gradient(transparent,rgba(0,0,0,.92))}
+.mod h3{font-size:1.25rem}.mod p{color:#d4d4d8;font-size:.92rem}
+.plans .card{display:flex;flex-direction:column}
+.plans .card.hot{border:2px solid var(--accent);position:relative}
+.plans .tag{position:absolute;top:-12px;left:24px;background:var(--accent);color:#0b0b0c;font-weight:800;font-size:.75rem;padding:4px 12px;border-radius:4px;text-transform:uppercase}
+.plans h3{font-size:1.3rem;text-transform:uppercase}
+.plans .p{font-family:Anton;font-size:3rem;line-height:1;margin:16px 0 4px}.plans .p small{font-family:Archivo;font-size:1rem;color:var(--muted)}
+.plans ul{list-style:none;margin:16px 0 24px;flex:1;color:var(--muted)}.plans li{padding:6px 0}.plans li::before{content:"→ ";color:var(--accent);font-weight:800}
+.sched{width:100%;border-collapse:collapse;font-size:.95rem}
+.sched th,.sched td{border-bottom:1px solid var(--line);padding:14px 10px;text-align:left}
+.sched th{color:var(--accent);text-transform:uppercase;font-size:.78rem;letter-spacing:1.5px}
+.sched td:first-child{font-weight:800}
+.scroll{overflow-x:auto}
+.trial{background:var(--accent);color:#0b0b0c;border-radius:6px;padding:56px;text-align:center}
+.trial h2{font-size:clamp(2.4rem,6vw,4rem);line-height:1}.trial p{margin:12px 0 26px;font-weight:500}
+.trial .btn{background:#0b0b0c;color:var(--accent)}
+@media(max-width:900px){.trial{padding:36px 22px}}
+</style>
+</head>
+<body data-nicho="academia">
+<div class="demo">Projeto conceito criado pela <a href="../index.html">Vitre</a> · negócio fictício</div>
+<header class="top"><div class="wrap">
+  <a href="#" class="logo">PULSE<span>FIT</span></a>
+  <nav><a href="#modalidades">Modalidades</a><a href="#planos">Planos</a><a href="#horarios">Horários</a><a href="#contato">Contato</a></nav>
+  <a class="btn fill wa hide-m" href="#">Aula grátis</a>
+  <button class="burger" aria-label="Abrir menu"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <h1>Sem desculpas.<br><span>Só resultado.</span></h1>
+  <p>Musculação, funcional, cross e lutas com professores presentes de verdade. Aberto das 5h às 23h.</p>
+  <div class="acts"><a class="btn fill wa" href="#">Agendar aula grátis</a><a class="btn line" href="#planos">Ver planos</a></div>
+</div></section>
+
+<div class="ticker" aria-hidden="true"><div>Musculação · Funcional · Cross · Muay Thai · Spinning · Avaliação física · Musculação · Funcional · Cross · Muay Thai · Spinning · Avaliação física · </div></div>
+
+<section id="modalidades"><div class="wrap">
+  <div class="head rv"><span class="eyebrow">Modalidades</span><h2>Escolha seu <span>treino</span></h2></div>
+  <div class="g4">
+    <div class="card mod rv"><img class="ph" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=70" alt=""><div><h3>Musculação</h3><p>Equipamentos novos e orientação constante.</p></div></div>
+    <div class="card mod rv"><img class="ph" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=70" alt=""><div><h3>Funcional</h3><p>Turmas pequenas, treino dinâmico.</p></div></div>
+    <div class="card mod rv"><img class="ph" src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=600&q=70" alt=""><div><h3>Muay Thai</h3><p>Condicionamento e defesa pessoal.</p></div></div>
+    <div class="card mod rv"><img class="ph" src="https://images.unsplash.com/photo-1534787238916-9ba6764efd4f?w=600&q=70" alt=""><div><h3>Spinning</h3><p>Aulas com música e muita energia.</p></div></div>
+  </div>
+</div></section>
+
+<section id="planos" style="background:#111113"><div class="wrap">
+  <div class="head rv"><span class="eyebrow">Planos</span><h2>Invista em <span>você</span></h2></div>
+  <div class="g3 plans">
+    <div class="card rv"><h3>Mensal</h3><div class="p">R$ 129<small>/mês</small></div><ul><li>Musculação</li><li>Avaliação física</li><li>Sem fidelidade</li></ul><a class="btn line wa" href="#">Quero este</a></div>
+    <div class="card hot rv"><span class="tag">Melhor custo</span><h3>Anual</h3><div class="p">R$ 99<small>/mês</small></div><ul><li>Musculação + todas as aulas</li><li>Avaliação física trimestral</li><li>1 mês de congelamento</li><li>Leve um amigo 2x por mês</li></ul><a class="btn fill wa" href="#">Quero este</a></div>
+    <div class="card rv"><h3>Semestral</h3><div class="p">R$ 115<small>/mês</small></div><ul><li>Musculação + 2 modalidades</li><li>Avaliação física</li><li>Sem taxa de matrícula</li></ul><a class="btn line wa" href="#">Quero este</a></div>
+  </div>
+</div></section>
+
+<section id="horarios"><div class="wrap">
+  <div class="head rv"><span class="eyebrow">Horários</span><h2>Grade de <span>aulas</span></h2></div>
+  <div class="scroll rv"><table class="sched">
+    <thead><tr><th>Aula</th><th>Seg / Qua / Sex</th><th>Ter / Qui</th><th>Sábado</th></tr></thead>
+    <tbody>
+      <tr><td>Funcional</td><td>6h · 18h · 19h</td><td>7h · 19h</td><td>9h</td></tr>
+      <tr><td>Muay Thai</td><td>20h</td><td>7h · 20h</td><td>10h</td></tr>
+      <tr><td>Spinning</td><td>7h · 19h</td><td>18h</td><td>8h</td></tr>
+      <tr><td>Cross</td><td>6h · 20h</td><td>6h · 18h</td><td>11h</td></tr>
+    </tbody>
+  </table></div>
+  <p class="muted" style="margin-top:14px;font-size:.9rem">Musculação: seg a sex 5h às 23h · sáb 8h às 18h · dom 8h às 12h</p>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="trial rv"><h2>Sua primeira aula é grátis</h2><p>Venha conhecer a estrutura, treinar com a gente e tirar suas dúvidas.</p><a class="btn wa" href="#">Agendar agora</a></div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="head center rv"><span class="eyebrow">Dúvidas</span><h2>Perguntas <span>frequentes</span></h2></div>
+  <div class="faq rv">
+    <details><summary>Tem taxa de matrícula?</summary><p>No plano mensal sim. Nos planos semestral e anual a matrícula é isenta.</p></details>
+    <details><summary>Preciso de avaliação física para começar?</summary><p>Recomendamos. Ela está inclusa em todos os planos e ajuda a montar o treino ideal.</p></details>
+    <details><summary>Posso congelar o plano?</summary><p>No plano anual você tem 1 mês de congelamento para viagens ou imprevistos.</p></details>
+    <details><summary>Tem estacionamento?</summary><p>Sim, estacionamento gratuito para alunos.</p></details>
+  </div>
+</div></section>
+
+<section id="contato" style="background:#111113"><div class="wrap contact">
+  <div class="rv"><span class="eyebrow">Contato</span><div class="head" style="margin-bottom:0"><h2>Bora <span>treinar?</span></h2></div>
+    <ul><li><b>Endereço</b>Av. Exemplo, 321 · Centro</li><li><b>Horário</b>Seg a sex 5h às 23h · Sáb 8h às 18h · Dom 8h às 12h</li></ul>
+    <a class="btn fill wa" href="#">Falar no WhatsApp</a></div>
+  <iframe class="map rv" src="https://maps.google.com/maps?q=Bras%C3%ADlia%2C%20DF&z=13&output=embed" loading="lazy" title="Mapa"></iframe>
+</div></section>
+
+<footer class="foot"><div class="wrap"><span>© <span id="ano"></span> Pulse Fit (negócio fictício)</span><span>Site criado por <a href="../index.html">Vitre Sites</a></span></div></footer>
+<script src="demo.js"></script>
+</body>
+</html>
