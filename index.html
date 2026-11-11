@@ -207,6 +207,31 @@
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
   @media (min-width:901px){.foot{padding-right:110px}}
   @media (max-width:900px){footer{padding-bottom:110px}.foot-right{align-items:flex-start}}
+
+  /* Vito, o mascote */
+  @keyframes bob{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-14px) rotate(3deg)}}
+  @keyframes pop{0%{opacity:0;transform:translateY(10px) scale(.9)}100%{opacity:1;transform:none}}
+  .vito-hero{position:absolute;left:-70px;bottom:-110px;width:210px;z-index:3;animation:bob 4.5s ease-in-out infinite;filter:drop-shadow(0 20px 30px rgba(139,92,246,.35))}
+  .vito-say{position:absolute;left:110px;bottom:105px;z-index:4;max-width:230px;background:rgba(10,15,28,.92);border:1px solid rgba(34,211,238,.45);color:var(--ink);font-size:.95rem;font-weight:600;line-height:1.35;padding:12px 16px;border-radius:16px 16px 16px 4px;box-shadow:0 10px 30px -10px rgba(34,211,238,.45);opacity:0;animation:pop .6s ease 1.2s forwards}
+  .vito-say b{color:var(--cyan)}
+  .vito-think{display:block;width:120px;margin:0 auto 6px;animation:bob 5s ease-in-out infinite}
+  .vito-party{display:block;width:150px;margin:-130px auto 4px;animation:bob 3.5s ease-in-out infinite;filter:drop-shadow(0 18px 30px rgba(226,70,239,.35))}
+  .cta-box{position:relative}
+  section.cta-sec{padding-top:150px}
+  .wa-tip{position:fixed;right:92px;bottom:30px;z-index:61;display:flex;align-items:center;gap:10px;background:rgba(10,15,28,.95);border:1px solid rgba(37,211,102,.5);border-radius:16px;padding:8px 34px 8px 8px;box-shadow:0 12px 30px -10px rgba(0,0,0,.6);color:var(--ink);font-size:.92rem;font-weight:600;opacity:0;pointer-events:none;transform:translateY(10px);transition:.4s}
+  .wa-tip.show{opacity:1;pointer-events:auto;transform:none}
+  .wa-tip img{width:44px;height:50px;object-fit:contain}
+  .wa-tip small{display:block;color:var(--muted);font-weight:500;font-size:.8rem}
+  .wa-tip button{position:absolute;top:4px;right:6px;background:none;border:0;color:var(--muted);font-size:1.1rem;cursor:pointer;line-height:1;padding:4px}
+  @media (max-width:900px){
+    .vito-hero{width:150px;left:-6px;bottom:-90px}
+    .hero{padding-bottom:140px}
+    .vito-say{left:118px;bottom:40px;max-width:200px;font-size:.88rem}
+    .wa-tip{right:86px;bottom:30px;max-width:190px;padding:6px 30px 6px 6px;font-size:.85rem}
+    .wa-tip small{display:none}
+    .wa-tip img{width:34px;height:40px}
+  }
+  @media (prefers-reduced-motion:reduce){.vito-say{opacity:1}}
 </style>
 </head>
 <body>
@@ -258,6 +283,8 @@
             <div class="hs-cards"><div></div><div></div><div></div></div>
           </div>
         </div>
+        <img class="vito-hero" src="img/vito-ola.svg" alt="">
+        <div class="vito-say">Oi! Eu sou o <b>Vito</b> 👋<br>Bora colocar o seu negócio na vitrine?</div>
       </div>
     </div>
   </section>
@@ -265,6 +292,7 @@
   <section id="pense">
     <div class="wrap">
       <div class="sec-head reveal">
+        <img class="vito-think" src="img/vito-pensando.svg" alt="Vito, o mascote da Vitre, pensando">
         <span class="kicker">PARE E PENSE</span>
         <h2>Três perguntas sobre o seu negócio</h2>
         <p>Responda com sinceridade. Só você vai saber a resposta.</p>
@@ -449,9 +477,10 @@
     </div>
   </section>
 
-  <section>
+  <section class="cta-sec">
     <div class="wrap">
       <div class="cta-box reveal">
+        <img class="vito-party" src="img/vito-comemorando.svg" alt="Vito, o mascote da Vitre, comemorando">
         <span class="kicker">VAMOS COMEÇAR?</span>
         <h2>Enquanto você pensa, seu concorrente <span class="grad">já está na vitrine</span>.</h2>
         <p>Dê o primeiro passo hoje. Chama a gente no WhatsApp e receba uma proposta sem compromisso.</p>
@@ -468,6 +497,7 @@
   </div>
 </footer>
 
+<div class="wa-tip" id="waTip" role="status"><img src="img/vito-tranquilo.svg" alt=""><div>Dúvidas? Fala com a gente!<small>Respondemos rapidinho no WhatsApp</small></div><button type="button" aria-label="Fechar" id="waTipX">×</button></div>
 <a class="wa-float wa-link" href="#" aria-label="Falar no WhatsApp">
   <svg viewBox="0 0 32 32"><path d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.5 1.7 6.4L3 29l6.8-1.8c1.9 1 4 1.5 6.2 1.5 7.2 0 13-5.8 13-13S23.2 3 16 3zm0 23.6c-2 0-3.9-.5-5.5-1.5l-.4-.2-4 1.1 1.1-3.9-.3-.4C5.9 20 5.4 18 5.4 16 5.4 10.2 10.2 5.4 16 5.4S26.6 10.2 26.6 16 21.8 26.6 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.7 5.1.8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.7-.4z"/></svg>
 </a>
@@ -494,6 +524,19 @@
     els.forEach(el => io.observe(el));
   } else {
     els.forEach(el => el.classList.add("on"));
+  }
+
+  // Balão do Vito perto do botão do WhatsApp
+  const tip = document.getElementById("waTip");
+  let tipOff = false;
+  try { tipOff = sessionStorage.getItem("vitoTip") === "off"; } catch (e) {}
+  if (tip && !tipOff) {
+    setTimeout(() => tip.classList.add("show"), 4000);
+    setTimeout(() => tip.classList.remove("show"), 16000);
+    document.getElementById("waTipX").addEventListener("click", () => {
+      tip.classList.remove("show");
+      try { sessionStorage.setItem("vitoTip", "off"); } catch (e) {}
+    });
   }
 </script>
 </body>

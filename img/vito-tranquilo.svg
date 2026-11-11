@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-260 -320 520 600">
+ <defs>
+  <linearGradient id="stb2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"></stop><stop offset=".6" stop-color="#8b5cf6"></stop><stop offset="1" stop-color="#e246ef"></stop></linearGradient>
+  <linearGradient id="glassb2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee" stop-opacity=".28"></stop><stop offset="1" stop-color="#8b5cf6" stop-opacity=".32"></stop></linearGradient>
+  <linearGradient id="armb2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"></stop><stop offset="1" stop-color="#8b5cf6"></stop></linearGradient>
+  <radialGradient id="orbb2"><stop offset="0" stop-color="#fff"></stop><stop offset=".35" stop-color="#e246ef"></stop><stop offset="1" stop-color="#e246ef" stop-opacity="0"></stop></radialGradient>
+  <filter id="glowb2" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="4" result="b"></feGaussianBlur><feMerge><feMergeNode in="b"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter>
+  <filter id="bodyglowb2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="22"></feGaussianBlur></filter>
+  <clipPath id="clipb2"><rect x="-140" y="-130" width="280" height="250" rx="62"></rect></clipPath>
+ </defs>
+ <ellipse cx="0" cy="240" rx="110" ry="16" fill="#8b5cf6" opacity=".35" filter="url(#bodyglowb2)"></ellipse>
+ <ellipse cx="0" cy="240" rx="80" ry="9" fill="#000" opacity=".5"></ellipse>
+ <g transform="translate(0,0) rotate(0)">
+  <line x1="0" y1="-130" x2="0" y2="-205" stroke="#a78bfa" stroke-width="8" stroke-linecap="round"></line>
+  <circle cx="0" cy="-214" r="34" fill="url(#orbb2)"></circle>
+  <circle cx="0" cy="-214" r="13" fill="#fff"></circle>
+  <rect x="-140" y="-130" width="280" height="250" rx="62" fill="#8b5cf6" opacity=".5" filter="url(#bodyglowb2)"></rect>
+  <rect x="-140" y="-130" width="280" height="250" rx="62" fill="#0b1020"></rect>
+  <rect x="-140" y="-130" width="280" height="250" rx="62" fill="url(#glassb2)"></rect>
+  <g clip-path="url(#clipb2)"><polygon points="-140,-130 -40,-130 -140,-30" fill="#fff" opacity=".12"></polygon><rect x="40" y="-200" width="26" height="400" fill="#fff" opacity=".07" transform="rotate(30)"></rect></g>
+  <rect x="-140" y="-130" width="280" height="250" rx="62" fill="none" stroke="url(#stb2)" stroke-width="10"></rect>
+  <rect x="-104" y="-92" width="208" height="170" rx="40" fill="#05070d" stroke="rgba(148,197,255,.18)" stroke-width="3"></rect>
+  <g transform="translate(0,-8)"><rect x="-52" y="-22" width="26" height="40" rx="13" fill="#22d3ee" filter="url(#glowb2)"></rect><rect x="26" y="-22" width="26" height="40" rx="13" fill="#22d3ee" filter="url(#glowb2)"></rect>
+          <circle cx="-44" cy="-12" r="5" fill="#fff"></circle><circle cx="34" cy="-12" r="5" fill="#fff"></circle><path d="M-24 36 Q0 58 24 36" stroke="#e8f1ff" stroke-width="8" fill="none" stroke-linecap="round"></path>
+   <ellipse cx="-70" cy="34" rx="16" ry="9" fill="#e246ef" opacity=".45"></ellipse><ellipse cx="70" cy="34" rx="16" ry="9" fill="#e246ef" opacity=".45"></ellipse></g>
+  <g transform="translate(0,100)"><circle r="17" fill="url(#stb2)"></circle><polygon points="-8,-8 -3,-8 0,2 3,-8 8,-8 2,9 -2,9" fill="#fff"></polygon></g>
+  <circle cx="-168" cy="40" r="26" fill="url(#armb2)"></circle><circle cx="168" cy="40" r="26" fill="url(#armb2)"></circle>
+ </g>
+ 
+</svg>
